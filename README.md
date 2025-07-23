@@ -1,4 +1,4 @@
-# Kual-fastfetch
+# Kual-fastfetch v1.0.0
 A small extension with precompiled binaries for fastfetch and figlet
 
 ## Customisation
