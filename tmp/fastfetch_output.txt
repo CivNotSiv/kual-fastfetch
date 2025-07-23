@@ -1,0 +1,29 @@
+        #####
+       #######
+       ##O#O##
+       #######
+     ###########
+    #############
+   ###############
+   ################
+  #################
+#####################
+#####################
+  #################[1G[11A[25Croot@kindle
+[25C-----------
+[25CKernel: Linux 3.0.35-lab126
+[25CUptime: 17 hours, 37 mins
+[25CShell: init.exe
+[25CCPU: Freescale i.MX 6SoloLite based Wario Board
+[25CMemory: 198.86 MiB / 248.86 MiB (80%)
+[25CSwap: Disabled
+[25CDisk (/): 402.18 MiB / 437.41 MiB (92%) - rootfs
+[25CDisk (/): 402.18 MiB / 437.41 MiB (92%) - ext3
+[25CDisk (/usr/share/nh): 4.16 MiB / 62.21 MiB (7%) - ext3
+[25CDisk (/var/local): 15.97 MiB / 61.97 MiB (26%) - ext3 [Read-only]
+[25CLocal IP (wlan0): 192.168.18.206/24
+[25CBattery: 78% (2 hours, 21 mins remaining) [Discharging]
+[25CLocale: en_GB.utf8
+[25C
+[25C[40m   [41m   [42m   [43m   [44m   [45m   [46m   [47m   [m
+[25C[5m[100m   [101m   [102m   [103m   [104m   [105m   [106m   [107m   [m

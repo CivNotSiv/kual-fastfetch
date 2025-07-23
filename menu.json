@@ -1,0 +1,17 @@
+{
+	"items": [
+	{
+		"name": "fastfetch",
+		"priority": 0,
+		"items": [
+		{
+			"name": "run fastfetch",
+			"priority": 10,
+			"action": "/mnt/us/extensions/fastfetch/bin/fetcher.sh",
+			"exitmenu": false,
+			"refresh": false
+		}
+		]
+	}
+	]
+}

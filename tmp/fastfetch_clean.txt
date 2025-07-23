@@ -1,0 +1,14 @@
+root@kindle
+Kernel: Linux 3.0.35-lab126
+Uptime: 17 hours, 37 mins
+Shell: init.exe
+CPU: Freescale i.MX 6SoloLite based Wario Board
+Memory: 198.86 MiB / 248.86 MiB (80%)
+Swap: Disabled
+Disk (/): 402.18 MiB / 437.41 MiB (92%) - rootfs
+Disk (/): 402.18 MiB / 437.41 MiB (92%) - ext3
+Disk (/usr/share/nh): 4.16 MiB / 62.21 MiB (7%) - ext3
+Disk (/var/local): 15.97 MiB / 61.97 MiB (26%) - ext3 [Read-only]
+Local IP (wlan0): 192.168.18.206/24
+Battery: 78% (2 hours, 21 mins remaining) [Discharging]
+Locale: en_GB.utf8
