@@ -1,17 +1,16 @@
 #!/bin/sh
 
 # binary locations
-FBINK="/mnt/us/extensions/fastfetch/bin/fbink"
-FIGLETBIN="/mnt/us/extensions/fastfetch/bin/figlet"
-FIGLETFONTS="/mnt/us/extensions/fastfetch/bin/fonts"
-FASTFETCH="/mnt/us/extensions/fastfetch/bin/fastfetch"
+FBINK="./fbink"
+FIGLETBIN="./figlet"
+FIGLETFONTS="./fonts"
+FASTFETCH="./fastfetch"
 
 # Ascii locations
-ARTFILE="/mnt/us/extensions/fastfetch/ascii_art.txt"
-ASCIITXTTMP="/mnt/us/extensions/fastfetch/tmp/ascii_text.txt"
-TMPFILE="/mnt/us/extensions/fastfetch/tmp/fastfetch_output.txt"
-CLEANFILE="/mnt/us/extensions/fastfetch/tmp/fastfetch_clean.txt"
-
+ARTFILE="./ascii_art.txt"
+ASCIITXTTMP="./tmp/ascii_text.txt"
+TMPFILE="./tmp/fastfetch_output.txt"
+CLEANFILE="./tmp/fastfetch_clean.txt"
 
 
 # Run fastfetch, save raw output
