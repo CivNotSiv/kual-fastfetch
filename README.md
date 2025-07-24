@@ -1,5 +1,5 @@
 # Kual-fastfetch v1.0.2
-A small extension with precompiled binaries for fastfetch and figlet no dependencies required
+A small extension with precompiled binaries for fastfetch and figlet with no dependencies required
 
 ## Customisation
 - Editing the ascii_art.txt will allow you to use any ascii art you want
