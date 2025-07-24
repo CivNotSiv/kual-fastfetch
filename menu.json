@@ -1,13 +1,13 @@
 {
 	"items": [
 	{
-		"name": "fastfetch",
+		"name": "kual-fastfetch",
 		"priority": 0,
 		"items": [
 		{
-			"name": "run fastfetch",
-			"priority": 10,
-			"action": "/mnt/us/extensions/fastfetch/bin/fetcher.sh",
+			"name": "run kual-fastfetch",
+			"priority": 1,
+			"action": "/mnt/us/extensions/kual-fastfetch/bin/fetcher.sh",
 			"exitmenu": false,
 			"refresh": false
 		}
