@@ -57,7 +57,15 @@ KERNEL_LINE=$(sed -n '2p' "$CLEANFILE" | cut -c15-)
 echo "$KERNEL_LINE" | "$FIGLETBIN" -f "$FIGLETFONTS/standard.flf" > "$ASCIITXTTMP"
 
 # print
-sleep 1.5
+
+# makes sure it sleeps for the shortest time, if gnu fails fallback to int
+if sleep 1.5 2>/dev/null; then
+  sleep 1.5
+else
+  sleep 2
+fi
+
+
 "$FBINK" -c -f
 "$FBINK" -r -y 23 -x 17 --size 1 < "$ARTFILE"
 "$FBINK" -r -y 45 -x 9 --size 1 < "$ASCIITXTTMP"
