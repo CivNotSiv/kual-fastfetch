@@ -1,24 +1,25 @@
 #!/bin/sh
 
+# Get the directory this script is in
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+
 # binary locations
-FBINK="./fbink"
-FIGLETBIN="./figlet"
-FIGLETFONTS="./fonts"
-FASTFETCH="./fastfetch"
+FBINK="$SCRIPT_DIR/fbink"
+FIGLETBIN="$SCRIPT_DIR/figlet"
+FIGLETFONTS="$SCRIPT_DIR/fonts"
+FASTFETCH="$SCRIPT_DIR/fastfetch"
 
 # Ascii locations
-ARTFILE="./ascii_art.txt"
-ASCIITXTTMP="./tmp/ascii_text.txt"
-TMPFILE="./tmp/fastfetch_output.txt"
-CLEANFILE="./tmp/fastfetch_clean.txt"
-
+ARTFILE="$SCRIPT_DIR/ascii_art.txt"
+ASCIITXTTMP="$SCRIPT_DIR/tmp/ascii_text.txt"
+TMPFILE="$SCRIPT_DIR/tmp/fastfetch_output.txt"
+CLEANFILE="$SCRIPT_DIR/tmp/fastfetch_clean.txt"
 
 # Run fastfetch, save raw output
-$FASTFETCH > "$TMPFILE"
+"$FASTFETCH" > "$TMPFILE"
 
 # fastfetch cleaner
 awk '
-  # Function to remove escape sequences of form ESC [ params letter
   function clean_esc_codes(line,   ESC, i, out, c, state) {
     ESC = sprintf("%c", 27)
     out = ""
@@ -32,14 +33,10 @@ awk '
         if (c == "[") state = 2
         else { out = out ESC c; state=0 }
       } else if (state == 2) {
-        # skip digits, semicolon, question mark
         if (c ~ /[0-9;?]/) {
-          # still in ESC sequence
         } else if (c ~ /[A-Za-z]/) {
-          # end of ESC sequence, reset
           state = 0
         } else {
-          # unexpected char, flush ESC sequence
           state = 0
           out = out c
         }
@@ -49,9 +46,7 @@ awk '
   }
   {
     cleaned = clean_esc_codes($0)
-    # strip leading junk characters like space, #, *, =, ., -
     sub(/^[ #*=.\-]+/, "", cleaned)
-    # print lines with at least 3 alnum chars
     if (cleaned ~ /([[:alnum:]].*){3,}/)
       print cleaned
   }
@@ -62,14 +57,8 @@ KERNEL_LINE=$(sed -n '2p' "$CLEANFILE" | cut -c15-)
 echo "$KERNEL_LINE" | "$FIGLETBIN" -f "$FIGLETFONTS/standard.flf" > "$ASCIITXTTMP"
 
 # print
-
 sleep 1.5
-
-$FBINK -c -f
-
-$FBINK -r -y 23 -x 17 --size 1 < "$ARTFILE"
-
-$FBINK -r -y 45 -x 9 --size 1 < "$ASCIITXTTMP"
-
-$FBINK -r -y 55 -x 5 --size 1 --font IBM< "$CLEANFILE"
-
+"$FBINK" -c -f
+"$FBINK" -r -y 23 -x 17 --size 1 < "$ARTFILE"
+"$FBINK" -r -y 45 -x 9 --size 1 < "$ASCIITXTTMP"
+"$FBINK" -r -y 55 -x 5 --size 1 --font IBM < "$CLEANFILE"
